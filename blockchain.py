@@ -21,7 +21,7 @@ def add_new_block(account_from, account_to, amount):  # функція дода�
     block = {
         "from": account_from,
         "to": account_to,
-        "amount": amount,
+        "amount": float(amount),
         "prev_hash": prev_hash,
         "time": time,
         "number_block": number_block
@@ -49,18 +49,18 @@ def validate_blockchain():
         prev_block = block
 
 
-def is_valid_hash(hash):
+def is_valid_hash(hash_copy):
     """повернення хеша з певним початком"""
-    return hash[0:2] == "00"
+    return hash_copy[0:2] == "00"
 
 
 def is_valid_proof(block, proof):  # чи підходить це число в якості доказу роботи
     """перевірка чи правильний доказ роботи"""
     block_copy = block.copy()  # створюємо копію блока
     block_copy["proof"] = proof
-    hash = data_to_hash(block_copy)  # рахуємо новий хеш
-    is_validhash = is_valid_hash(hash)
-    return is_validhash  # чи починається цей хеш з двох 0
+    hash_copy = data_to_hash(block_copy)  # рахуємо новий хеш
+    is_valid = is_valid_hash(hash_copy)
+    return is_valid  # чи починається цей хеш з двох 0
 
 
 def mine_proof_of_work(block):  # намайнити таке число додавши його до блоку, щоб хеш починався з двох 0
@@ -83,11 +83,11 @@ def calculate_balances():
             balance_from = balances[block["to"]]
         else:
             balance_to = float(0)
-        a = balance_from - block["amount"]
-        b = balance_to + block["amount"]
+        bal_from = balance_from - block["amount"]
+        bal_to = balance_to + block["amount"]
 
-        balances[block["from"]] = a
-        balances[block["to"]] = b
+        balances[block["from"]] = bal_from
+        balances[block["to"]] = bal_to
     return balances
 
 
@@ -101,12 +101,13 @@ def new_transaction(hash_words):
     if check in ("Y", "y"):
         print("transaction send to blockchain ")
         add_new_block(account_from, account_to, amount)
+        new_transaction(hash_words)
     else:
         new_transaction(hash_words)
 
 
 def wallet():
-    """гаманець валюти"""
+    """створення чи відкриття гаманця"""
     first_question = (input("If you want create wallet enter C/c.>>If you want open enter O/o >>"))
     if first_question in ("C", "c"):
         seed_words = input("Input 4 words and remember or write on sheet of paper >>")
@@ -153,7 +154,7 @@ genesis_block["proof"] = mine_proof_of_work(genesis_block)
 
 blockchain = [
     genesis_block
-]  # блокчейн це список транзакцій
+]
 
 
 def main():

@@ -3,52 +3,16 @@
         "amount": 0.0,
         "from": "",
         "number_block": 0,
-        "proof": 4053,
+        "proof": 1043,
         "to": ""
     },
     {
-        "amount": 100,
-        "from": "adam",
+        "amount": 3.0,
+        "from": "4550a67094a642f8b86dba085ff27ec5743484cf4a08feec7d65be7ac64d529007d34d54c15afb3c560bdd18bed0b3800ca2cc194684e36fbbd09441266f511a",
         "number_block": 1,
-        "prev_hash": "0000e93e9a890c983801c3ff6f058c591c03675533de83472551198d8aa1e369b6666b56f1667c8696129bbb1e36d4a696d8f627c63dd686787a451d5507bb1a",
-        "proof": 6507,
-        "time": "2021-12-10 15:40:41.534285",
-        "to": "james"
-    },
-    {
-        "amount": 100,
-        "from": "tim",
-        "number_block": 2,
-        "prev_hash": "0000968dc4da520f83b34e2628791afaf46e5df9ca08b4320ad43b9727b13c37c83b73fd59f685c51bbf489e39b6feabffb18567d3ad8a40f1633e5f76591bd8",
-        "proof": 41635,
-        "time": "2021-12-10 15:40:41.626262",
-        "to": "jan"
-    },
-    {
-        "amount": 100,
-        "from": "tim",
-        "number_block": 3,
-        "prev_hash": "00003bd8b626c1be0e1ddf3feab2948f680526cbc391ed6279f22cd3abb172237aa52de40bf467164c19456a9a7593af128a5313b0e23d07ff11535168e2de19",
-        "proof": 54779,
-        "time": "2021-12-10 15:40:42.184275",
-        "to": "georg"
-    },
-    {
-        "amount": 100,
-        "from": "adam",
-        "number_block": 4,
-        "prev_hash": "000040209a9899f62e75b5f3ba850fb679f76f463edfe9b8d741d530504b2cadf0b42c8c99b3c7b7f0cc120fb3213565ba8fef93da40ac795f644b6dd9b11a02",
-        "proof": 21373,
-        "time": "2021-12-10 15:40:42.931241",
-        "to": "grace"
-    },
-    {
-        "amount": 100,
-        "from": "jan",
-        "number_block": 5,
-        "prev_hash": "000073baff0136fa23cee8f8fe573fe22de043e31c47b5272f493c6ad1371dd1ce15b395487513ceca9faad4d7a6bb4b9ce4d83c959c8ada240fbaa2bb5950af",
-        "proof": 15519,
-        "time": "2021-12-10 15:40:43.218239",
-        "to": "grace"
+        "prev_hash": "007a3d734a1d412dd37b142f68a59ddf1c89499a6d8d986d55eb3a51dd8dc1780eef143787b0c7d070b0e3ee9dbdf93bfd2c5a67c0b545bb71122f89bdd1b1e7",
+        "proof": 1182,
+        "time": "2021-12-13 15:55:06.463119",
+        "to": "445645"
     }
 ]
